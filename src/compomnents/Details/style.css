@@ -1,0 +1,119 @@
+.detailPage {
+  position: relative;
+  color: white;
+}
+
+.detailPage .backLink {
+  position: absolute;
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  left: 50px;
+  top: 10px;
+  filter: drop-shadow(2px 3px 4px rgb(0 0 0 / 0.5));
+}
+
+.detailPage .backLink svg {
+  width: 30px;
+  transition: margin-right 0.2s ease-in-out;
+}
+
+.detailPage .backLink:hover svg {
+  margin-right: 5px;
+}
+
+.detailPage .background {
+  min-height: 100vh;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detailPage img {
+  border: 5px solid #fff;
+  width: 350px;
+}
+
+.detailPage .summary {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.detailPage .details {
+  margin-left: 0;
+  margin-bottom: 16px;
+}
+
+.detailPage .details p {
+  max-width: 400px;
+  align-items: center; /* Align items vertically */
+}
+
+.detailPage .details h1 {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.detailPage .details .rating {
+  color: black;
+  font-weight: 500;
+  background: white;
+  padding: 0 5px;
+  text-shadow: none;
+  font-size: 24px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center; /* Align rating text and star icon horizontally */
+}
+
+.detailPage .details .star {
+  margin-right: 5px; /* Add margin between star icon and rating */
+}
+
+@media (min-width: 577px) {
+  .detailPage .summary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 50px;
+  }
+
+  .detailPage .details {
+    margin-left: 20px;
+  }
+
+  .detailPage img {
+    width: 340px;
+  }
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  color: red;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.loading-message {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.back-button {
+  color: white;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  margin-top: 5px;
+  transition: 0.5s;
+}

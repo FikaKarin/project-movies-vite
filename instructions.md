@@ -98,7 +98,6 @@ This route expects a movie ID in the URL and is responsible for showing more det
 - You should follow the design from our example (but it's ok to change things - just try to make it look nice).
 - Adapting to the different viewports
 
-
 ## Stretch Goals
 
 ### Intermediate stretch goals
