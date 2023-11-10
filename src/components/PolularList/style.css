@@ -1,0 +1,76 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-item {
+  width: 25%;
+  position: relative;
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+}
+
+.movie-item:hover img {
+  filter: brightness(20%);
+}
+.movie-title {
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.movie-release-date {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.movie-item:hover .overlay {
+  opacity: 1;
+}
+
+.dropdown-menu {
+  display: flex;
+  /* position: fixed; */
+  top: 1px;
+  flex-direction: row;
+  width: 350px;
+  font-size: 22px;
+  background-color: rgba(0, 255, 255, 0.419);
+  background-color: black;
+}
+
+.dropdown-menu label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #007d7d;
+  width: 500px;
+  margin-right: -200px;
+}
+
+select#movie-list {
+  width: 250px;
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #007d7d; /* Add a border */
+  border-radius: 4px; /* Add rounded corners */
+  outline: none; /* Remove the default select box outline */
+}

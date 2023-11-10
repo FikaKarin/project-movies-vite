@@ -117,3 +117,21 @@
   margin-top: 5px;
   transition: 0.5s;
 }
+
+.production-companies h3 {
+font-size: 12px;
+font-weight: 900;
+font-style: italic;
+margin-top: 8px;
+}
+
+.production-companies #link {
+  font-size: 12;
+  color: rgb(168, 168, 202);
+  text-decoration: none;
+}
+
+.production-companies #link:hover {
+  color: rgb(69, 69, 253);
+}
+

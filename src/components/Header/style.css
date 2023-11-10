@@ -1,0 +1,16 @@
+.header-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 25px;
+  margin-left: 16px;
+  margin-top: 8px;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  align-items: center;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
