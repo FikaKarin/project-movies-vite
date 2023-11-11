@@ -14,13 +14,6 @@ export const PopularList = ({ selectedList }) => {
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutsideDropdown);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutsideDropdown);
-    };
-  }, []);
-
-  useEffect(() => {
     const fetchMovies = async () => {
       try {
         const response = await fetch(
