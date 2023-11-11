@@ -1,7 +1,7 @@
-import { BackIcon } from '../Back';
+import { BackIcon } from '../components/Back';
 import { Link } from 'react-router-dom';
-import { DetailsContent } from './DetailsContent';
-import './style.css';
+import { DetailsContent } from '../components/Details/DetailsContent';
+import '../components/Details/style.css';
 
 export const Details = () => {
   

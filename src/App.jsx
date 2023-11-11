@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { PopularList } from './components/PolularList/PopularList';
-import { Details } from './components/Details/Details';
+import { PopularList } from './Screens/PopularList';
+import { Details } from './Screens/Details';
 import { Header } from './components/Header/Header';
 
 export const App = () => {

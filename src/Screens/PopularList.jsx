@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './style.css';
+import '../components/PolularList/style.css';
 
 export const PopularList = ({ selectedList }) => {
   const [movies, setMovies] = useState([]);
