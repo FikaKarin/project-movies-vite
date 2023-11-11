@@ -3,11 +3,13 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'https://splendorous-lebkuchen-c101ee.netlify.app/', // Add this line
   plugins: [react()],
   build: {
-    outDir: 'dist', // Explicitly set the output directory
+    outDir: 'dist',
     rollupOptions: {
       external: ['react-router-dom'],
     },
   },
 });
+
