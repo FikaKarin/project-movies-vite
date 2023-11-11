@@ -18,7 +18,7 @@ export const DropDown = ({
           ref={dropdownRef}
         >
           <div className='dropdown-menu'>
-            <label htmlFor='movie-list'>Select Movie List:</label>
+            <label htmlFor='movie-list'>Select movie list:</label>
             <select
               id='movie-list'
               value={selectedList}
