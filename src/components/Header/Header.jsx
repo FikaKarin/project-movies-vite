@@ -5,18 +5,17 @@ import './style.css';
 export const Header = ({
   selectedList,
   handleListChange,
-  dropdownRef,
-  isDropdownOpen,
+  isDetailsOrErrorVisible,
 }) => {
   return (
     <div className='header-container'>
       <h1>KAKANS's MOVIE HUB</h1>
-      <DropDown
-        selectedList={selectedList}
-        setSelectedList={handleListChange}
-        dropdownRef={dropdownRef}
-        isDropdownOpen={isDropdownOpen}
-      />
+      {!isDetailsOrErrorVisible && (
+        <DropDown
+          selectedList={selectedList}
+          setSelectedList={handleListChange}
+        />
+      )}
     </div>
   );
 };

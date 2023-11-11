@@ -13,7 +13,9 @@
   left: 50px;
   top: 10px;
   filter: drop-shadow(2px 3px 4px rgb(0 0 0 / 0.5));
+  z-index: 2; /* Set a higher z-index to ensure the back button is above other elements */
 }
+
 
 .detailPage .backLink svg {
   width: 30px;
@@ -30,17 +32,30 @@
   background-size: cover;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+}
+
+.detailPage .background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
 }
 
 .detailPage img {
-  border: 5px solid #fff;
-  width: 350px;
+  max-width: 100%;
+  height: auto;
 }
 
 .detailPage .summary {
   display: flex;
   flex-direction: column;
   padding: 50px;
+  position: relative; /* Make sure it's positioned relative to allow z-index to work */
+  z-index: 1; /* Set a higher z-index to place it in front of the overlay */
 }
 
 .detailPage .details {
@@ -74,23 +89,6 @@
 
 .detailPage .details .star {
   margin-right: 5px; /* Add margin between star icon and rating */
-}
-
-@media (min-width: 577px) {
-  .detailPage .summary {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    padding: 50px;
-  }
-
-  .detailPage .details {
-    margin-left: 20px;
-  }
-
-  .detailPage img {
-    width: 340px;
-  }
 }
 
 .error-message {
@@ -134,4 +132,28 @@ margin-top: 8px;
 .production-companies #link:hover {
   color: rgb(69, 69, 253);
 }
+
+@media (min-width: 698px) {
+  .detailPage .summary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 50px;
+  }
+
+  .detailPage .details {
+    margin-left: 20px;
+  }
+
+  .detailPage img {
+    width: 340px;
+  }
+}
+
+@media (max-width: 576px) {
+  .detailPage .background {
+    background-size: cover;
+  }
+}
+
 

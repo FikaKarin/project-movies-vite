@@ -13,13 +13,25 @@ export const App = () => {
 
   return (
     <Router>
-      <Header
-        selectedList={selectedList}
-        handleListChange={handleListChange}
-      />
       <Routes>
-        <Route path='/' element={<PopularList selectedList={selectedList} />} />
-        <Route path='/movies/:id' element={<Details />} />
+        <Route
+          path='/'
+          element={
+            <>
+              <Header
+                selectedList={selectedList}
+                handleListChange={handleListChange}
+              />
+              <PopularList
+                selectedList={selectedList}
+              />
+            </>
+          }
+        />
+        <Route
+          path='/movies/:id'
+          element={<Details />}
+        />
       </Routes>
     </Router>
   );
