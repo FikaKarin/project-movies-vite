@@ -10,6 +10,7 @@ export const DetailsContent = () => {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -41,6 +42,10 @@ export const DetailsContent = () => {
   }
 
   const formattedRating = movie.vote_average.toFixed(1);
+  // Function to handle image load
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   // IMDb link
   const imdbLink = `https://www.imdb.com/title/${movie.imdb_id}/?ref_=fn_al_tt_1`;
@@ -59,14 +64,25 @@ export const DetailsContent = () => {
       >
         <div className='overlay'></div>
         <div className='summary'>
-          <img
-            src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
-            alt={movie.title}
-          />
+          {/* Conditionally render the image or a placeholder */}
+          {movie.poster_path ? (
+            <img
+              src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+              alt={movie.title}
+              onLoad={handleImageLoad}
+              className='movie-poster'
+            />
+          ) : (
+            <img
+              src='https://static.displate.com/857x1200/displate/2022-04-15/7422bfe15b3ea7b5933dffd896e9c7f9_46003a1b7353dc7b5a02949bd074432a.jpg'
+              alt='No Poster Available'
+              className='movie-poster'
+            />
+          )}
           <div className='details'>
             <div>
               <h1>
-                <a href={imdbLink} target="_blank" rel="noopener noreferrer">
+                <a href={imdbLink} target='_blank' rel='noopener noreferrer'>
                   {movie.title}
                 </a>
                 <span className='rating'>
