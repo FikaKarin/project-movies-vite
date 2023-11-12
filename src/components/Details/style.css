@@ -116,8 +116,7 @@
   transition: 0.5s;
 }
 
-.production-companies h3 {
-font-size: 12px;
+h3 {
 font-weight: 900;
 font-style: italic;
 margin-top: 8px;
@@ -131,6 +130,11 @@ margin-top: 8px;
 
 .production-companies #link:hover {
   color: rgb(69, 69, 253);
+}
+
+.genre {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 698px) {

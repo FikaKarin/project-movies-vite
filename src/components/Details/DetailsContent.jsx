@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { StarIcon } from './Star.jsx';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LoadingMessage } from '../LoadingMessage/LoadingMessage';
+import { BackIcon } from '../Back.jsx';
 
 export const DetailsContent = () => {
   const { id } = useParams();
@@ -40,8 +41,13 @@ export const DetailsContent = () => {
   }
 
   const formattedRating = movie.vote_average.toFixed(1); // Format rating to one decimal
+
   return (
     <div>
+      <Link to='/' className='backLink'>
+        <BackIcon />
+        Movies
+      </Link>
       <div
         className='background'
         style={{
@@ -54,7 +60,7 @@ export const DetailsContent = () => {
             src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
             alt={movie.title}
             onError={(e) => {
-              e.target.src = 'path/to/fallback-image.jpg'; // Set a fallback image source
+              e.target.src = '../../assets/fallBack.jpeg'; // Set a fallback image source
             }}
           />
           <div className='details'>
@@ -73,14 +79,18 @@ export const DetailsContent = () => {
                 <h3>Production Companies:</h3>
                 {movie.production_companies.map((company, index) => (
                   <React.Fragment key={company.id}>
-                    {index > 0 && ', '}{' '}
+                    {index > 0 && ', '}
                     {/* Add a comma and space for companies after the first one */}
-                    <Link id='link' to={`/production-company/${company.id}`}>
-                      {company.name}
-                    </Link>
+                    {company.name}
                   </React.Fragment>
                 ))}
               </div>
+            </div>
+            <div className='genre'>
+              <h3>Genre:</h3>
+              {movie.genres.map((genre) => (
+                <h5 key={genre.id}>{genre.name}</h5>
+              ))}
             </div>
           </div>
         </div>

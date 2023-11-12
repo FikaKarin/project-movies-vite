@@ -1,0 +1,44 @@
+.dropdown-menu {
+  display:flex;
+  align-items: center;
+  width: 300px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+select#movie-list {
+  width: 150px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #007d7d;
+  border-radius: 4px;
+  outline: none;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Style the dropdown arrow */
+select#movie-list::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #333;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .dropdown-menu{
+    width: 235px;
+  }
+}

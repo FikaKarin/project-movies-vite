@@ -12,7 +12,6 @@ export const DropDown = ({
     };
   
     return (
-      <div>
         <div
           className={`dropdown ${isDropdownOpen ? 'open' : ''}`}
           ref={dropdownRef}
@@ -30,6 +29,5 @@ export const DropDown = ({
             </select>
           </div>
         </div>
-      </div>
     );
   };

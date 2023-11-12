@@ -4,14 +4,6 @@ import '../components/PolularList/style.css';
 
 export const PopularList = ({ selectedList }) => {
   const [movies, setMovies] = useState([]);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const handleClickOutsideDropdown = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
-  };
 
   useEffect(() => {
     const fetchMovies = async () => {
