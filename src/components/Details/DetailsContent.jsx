@@ -40,7 +40,10 @@ export const DetailsContent = () => {
     return <LoadingMessage />;
   }
 
-  const formattedRating = movie.vote_average.toFixed(1); // Format rating to one decimal
+  const formattedRating = movie.vote_average.toFixed(1);
+
+  // IMDb link
+  const imdbLink = `https://www.imdb.com/title/${movie.imdb_id}/?ref_=fn_al_tt_1`;
 
   return (
     <div>
@@ -59,14 +62,13 @@ export const DetailsContent = () => {
           <img
             src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
             alt={movie.title}
-            onError={(e) => {
-              e.target.src = '../../assets/fallBack.jpeg'; // Set a fallback image source
-            }}
           />
           <div className='details'>
             <div>
               <h1>
-                {movie.title}
+                <a href={imdbLink} target="_blank" rel="noopener noreferrer">
+                  {movie.title}
+                </a>
                 <span className='rating'>
                   <span className='star'>
                     <StarIcon />
@@ -80,7 +82,6 @@ export const DetailsContent = () => {
                 {movie.production_companies.map((company, index) => (
                   <React.Fragment key={company.id}>
                     {index > 0 && ', '}
-                    {/* Add a comma and space for companies after the first one */}
                     {company.name}
                   </React.Fragment>
                 ))}
