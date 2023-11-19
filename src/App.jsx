@@ -22,9 +22,7 @@ export const App = () => {
                 selectedList={selectedList}
                 handleListChange={handleListChange}
               />
-              <PopularList
-                selectedList={selectedList}
-              />
+              <PopularList selectedList={selectedList} />
             </>
           }
         />
@@ -36,3 +34,4 @@ export const App = () => {
     </Router>
   );
 };
+
