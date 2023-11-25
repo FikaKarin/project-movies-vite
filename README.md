@@ -10,8 +10,6 @@ Deployed on Netlify: https://deluxe-biscuit-c45cff.netlify.app/movies/575264
 
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## Getting Started with the Project
-
 ### Dependency Installation & Startup Development Server
 
 Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
