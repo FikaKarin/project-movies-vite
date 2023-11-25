@@ -3,8 +3,9 @@
 
 THIS PROJECT WAS MADE BY KARIN LUNDQVIST
 Deployed on Netlify: https://deluxe-biscuit-c45cff.netlify.app/movies/575264
+<img width="900" alt="Skärmavbild 2023-11-25 kl  19 15 36" src="https://github.com/FikaKarin/project-movies-vite/assets/91525357/0ff59f55-1928-4159-b3ad-8cdcd5fd5020">
 
-<img width="1413" alt="Skärmavbild 2023-11-11 kl  14 19 42" src="https://github.com/FikaKarin/project-movies-vite/assets/91525357/28207365-b4dc-4c6d-8e89-63890ab7cc90">
+<img width="900" alt="Skärmavbild 2023-11-11 kl  14 19 42" src="https://github.com/FikaKarin/project-movies-vite/assets/91525357/28207365-b4dc-4c6d-8e89-63890ab7cc90">
 
 
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
