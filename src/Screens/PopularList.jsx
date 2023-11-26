@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../components/PolularList/style.css';
 
 export const PopularList = ({ selectedList }) => {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate(); // Use navigate hook to navigate to different routes
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -21,6 +22,11 @@ export const PopularList = ({ selectedList }) => {
     fetchMovies();
   }, [selectedList]);
 
+  // Function to navigate to GenreList
+  const navigateToGenreList = () => {
+    navigate('/genres'); // Navigate to the 'genres' path
+  };
+
   return (
     <div className='movie-list'>
       {movies.map((movie) => (
@@ -37,6 +43,8 @@ export const PopularList = ({ selectedList }) => {
           </Link>
         </div>
       ))}
+      {/* Button to navigate to GenreList */}
+      <button onClick={navigateToGenreList}>Show Genres</button>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { StarIcon } from './Star.jsx';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LoadingMessage } from '../LoadingMessage/LoadingMessage';
 import { BackIcon } from '../Back.jsx';
+import { GenreList } from '../GenreList/GenreList.jsx'; // Import GenreList
 
 export const DetailsContent = () => {
   const { id } = useParams();
@@ -104,10 +105,8 @@ export const DetailsContent = () => {
               </div>
             </div>
             <div className='genre'>
-              <h3>Genre:</h3>
-              {movie.genres.map((genre) => (
-                <h5 key={genre.id}>{genre.name}</h5>
-              ))}
+              {/* Pass genres to GenreList */}
+              <GenreList genres={movie.genres} />
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { PopularList } from './Screens/PopularList';
 import { Details } from './Screens/Details';
+import { GenreList } from './components/GenreList/GenreList'; // New import for GenreList
 import { Header } from './components/Header/Header';
 
 export const App = () => {
@@ -22,7 +23,11 @@ export const App = () => {
                 selectedList={selectedList}
                 handleListChange={handleListChange}
               />
-              <PopularList selectedList={selectedList} />
+              {/* Nested Routes */}
+              <Routes>
+                <Route path='/' element={<PopularList selectedList={selectedList} />} />
+                <Route path='genres/*' element={<GenreList />} />
+              </Routes>
             </>
           }
         />
@@ -34,4 +39,3 @@ export const App = () => {
     </Router>
   );
 };
-
